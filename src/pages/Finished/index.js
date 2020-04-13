@@ -8,9 +8,7 @@ import { GridContainer, Titulo, Button, Container1, Container2 } from './styles'
 function Finalizado() {
     return (
         <GridContainer>
-
             <Navbar />
-
             <div>
                 <Container1>
                     <IconResume />
@@ -21,7 +19,6 @@ function Finalizado() {
                     <a href="/pedido"><Button cor="fff" bg="#FF8822">Fazer novo pedido</Button></a>
                 </Container2>
             </div>
-
         </GridContainer>
     );
 }

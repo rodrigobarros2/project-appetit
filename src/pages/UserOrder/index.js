@@ -3,7 +3,6 @@ import Navbar from "../../components/navbar";
 
 import VoltarIcon from "../../assets/icons/voltar";
 
-
 function Dashboard() {
     const ordersList = [
         {

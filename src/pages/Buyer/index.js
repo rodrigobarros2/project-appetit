@@ -49,9 +49,7 @@ function Dashboard() {
         ],
     };
 
-
     const formatter = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-
 
     return (
         <main className="">
@@ -127,7 +125,6 @@ function Dashboard() {
                                     </li>
                                 </a>
                             ))}
-
                             <div className="btn-container">
                                 <a href="/statuspagamento"><button className="btn-scrol-pedido">avançar</button></a>
                             </div>

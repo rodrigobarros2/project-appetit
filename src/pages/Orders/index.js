@@ -3,11 +3,9 @@ import Navbar from "../../components/navbar";
 
 import img from "../../assets/IMG.png"
 
-
 import SearchIcon from "../../assets/icons/Search"
 import IconResume from "../../assets/icons/IconResume"
 import VoltarIcon from "../../assets/icons/voltar";
-
 
 function Dashboard() {
     const ordersList = {
@@ -55,7 +53,6 @@ function Dashboard() {
     };
 
     const formatter = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-
 
     return (
         <main className="">
@@ -136,7 +133,6 @@ function Dashboard() {
                                 </li>
                                 </a>
                             ))}
-
                             <div className="btn-container">
                                 <a href="/comprador"><button className="btn-scrol-pedido">avançar</button></a>
                             </div>

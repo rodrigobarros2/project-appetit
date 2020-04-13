@@ -14,7 +14,6 @@ function Login() {
 
     const dispatch = useDispatch();
 
-
     function logar() {
         /* then é uma promessa entra uma requesição e quem requisita, se email e senha der errado entara na condição error */
         firebase.auth().signInWithEmailAndPassword(email, senha).then(resultado => {
@@ -56,22 +55,17 @@ function Login() {
                     placeholder="Senha"
                 />
                 <button className="recover-btn btn-logim" type="button">recuperar minha senha</button>
-
                 <button
                     onClick={logar}
                     className="btn-entrar btn-logim"
                     type="button">
                     Entrar
                 </button>
-
-
                 <div>
                     {/*  === é igual e do msm tipo? */}
                     {msgTipo === 'sucesso' && <span>Usuário Logado</span>}
                     {msgTipo === 'erro' && <span>Verifique se a senha e usuário estão corretos</span>}
                 </div>
-
-
                 <p className="copyright-login">Infoway Gestão em Saúde ©,2019.</p>
             </form>
         </div>

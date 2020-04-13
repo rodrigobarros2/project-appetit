@@ -18,8 +18,7 @@ function Detalhes() {
     ];
 
     const formatter = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-
-
+    
     return (
         <main className="">
             <Navbar className="navbar-novo-pedido" />
@@ -65,7 +64,6 @@ function Detalhes() {
                         <h6 className="opcoes">Opções</h6>
                         <p className="texto-pag-detalhes">Escolha dentre as opções de massas abaixo.</p>
 
-
                         <form className="form-radio form-radio--responsive">
                             <div className="div-input-radio">
                                 <input type="radio" id="male" name="gender" defaultValue="male" />
@@ -77,7 +75,6 @@ function Detalhes() {
                             </div>
                         </form>
 
-
                         <div className="order-separator"></div>
 
                         <p className="text-obs">Observações</p>
@@ -85,7 +82,6 @@ function Detalhes() {
                         <input className="input-obs" type="text" placeholder="Deseja adicionar alguma observação?" id="milho" />
 
                     </div>
-
 
                     <div className="contador-pedidos">
 
