@@ -1,11 +1,16 @@
 import React from "react";
 import Navbar from "../../components/navbar";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 import img from "../../assets/IMG.png"
+import IconCalendar from "../../assets/icons/IconCalendar"
 
 import VoltarIcon from "../../assets/icons/voltar";
 
 function PaymentStatus() {
+    const [startDate, setStartDate] = React.useState(new Date());
+
     const ordersList = {
         cliente: [
             {
@@ -125,7 +130,18 @@ function PaymentStatus() {
 
                         <p className="text-obs">Em qual data foi realizado?</p>
 
-                        <input className="input-obs" type="text" placeholder="Seleciona uma data" id="milho" />
+
+
+                        <DatePicker
+                            dateFormat="dd/MM/yyyy"
+                            id="milho"
+                            className="input-obs"
+                            placeholder="Seleciona uma data"
+                            selected={startDate}
+                            onChange={date => setStartDate(date)}>
+                        </DatePicker>
+
+                        <IconCalendar />
 
                         <div className="btn-container">
                             <a href="/finalizado"><button className="btn-scrol-pedido">avançar</button></a>
@@ -134,7 +150,7 @@ function PaymentStatus() {
                     </div>
                 </div>
             </div>
-        </main>
+        </main >
     )
 }
 export default PaymentStatus;

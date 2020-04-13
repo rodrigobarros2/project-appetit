@@ -60,7 +60,7 @@ function Dashboard() {
                 <div className="container-1">
                     <div className="conteudo-comprador">
                         <div className="title-container title-container-comprador">
-                            <a href="/"><VoltarIcon /></a>
+                            <a href="/pedido"><VoltarIcon /></a>
                             <h3 className="content-title">Novo pedido</h3>
                         </div>
                         <h4 className="produtos-comprador">Produtos</h4>

@@ -600,6 +600,8 @@ body,
 
 .contador-pedidos {
   display: flex;
+  position: absolute;
+  bottom: 0;
   align-items: center;
   justify-content: space-between;
   background: #fafafa;
@@ -662,6 +664,10 @@ body,
 
 .barra-cinza {
   border-bottom: 8px solid #00000014;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
 }
 
 .pedido-observacao {
@@ -839,7 +845,7 @@ body,
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 3000px) {
   .voltaicon-oculto {
     display: none;
   }
