@@ -50,9 +50,8 @@ function Detalhes() {
 
 				<div className="container-2">
 
-					<div className="aa">
+					<div className="container-flex">
 						<div className="title-container title-container--2 ">
-
 							<a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
 							<h3 className="content-title">Detalhes do pedido</h3>
 						</div>
@@ -60,34 +59,19 @@ function Detalhes() {
 
 						<ul>
 							{ordersList.map((item, i) => (
-								<li className="user-order order--pedidos order--detalhes" key={i}>
-									<div className="user-img"></div>
-									<div className="style-text">
-										<div className="">
-											<span>{item.products.join(', ')}</span>
+								<div key={i}>
+									<li className="user-order order--pedidos order--detalhes">
+										<div className="user-img"></div>
+										<div className="style-text">
+											<div className="">
+												<span>{item.products.join(', ')}</span>
+											</div>
+											<div>
+												<b className="preco-detalhes">{formatter.format(item.price)}</b>
+											</div>
 										</div>
-										<div>
-											<b className="preco-detalhes">{formatter.format(item.price)}</b>
-										</div>
-									</div>
-								</li>
-							))}
-						</ul>
-
-
-						<ul>
-							{ordersList.map((item, i) => (
-								<li className="user-order order--pedidos order--detalhes" key={i}>
-									<div className="user-img"></div>
-									<div className="style-text">
-										<div className="">
-											<span>{item.products.join(', ')}</span>
-										</div>
-										<div>
-											<b className="preco-detalhes">{formatter.format(item.price)}</b>
-										</div>
-									</div>
-								</li>
+									</li>
+								</div>
 							))}
 						</ul>
 						<h6 className="opcoes">Opções</h6>
@@ -97,27 +81,31 @@ function Detalhes() {
 							onSubmit={handleRegister}
 							className="form-radio form-radio--responsive">
 
-							<label htmlFor="milho"><div className="div-input-radio">
-								<input
-									value={option}
-									onChange={e => setOption(e.target.value)}
-									type="radio"
-									name="food"
-									id="milho"
-									defaultValue="milho" />
-								Milho
-							</div></label>
+							<label htmlFor="milho">
+								<div className="div-input-radio">
+									<input
+										value={option}
+										onChange={e => setOption(e.target.value)}
+										type="radio"
+										name="food"
+										id="milho"
+										defaultValue="milho" />
+										Milho
+								</div>
+							</label>
 
-							<label htmlFor="arroz"><div className="div-input-radio">
-								<input
-									value={option}
-									onChange={e => setOption(e.target.value)}
-									type="radio"
-									name="food"
-									id="arroz"
-									defaultValue="arroz" />
-								Arroz
-							</div></label>
+							<label htmlFor="arroz">
+								<div className="div-input-radio">
+									<input
+										value={option}
+										onChange={e => setOption(e.target.value)}
+										type="radio"
+										name="food"
+										id="arroz"
+										defaultValue="arroz" />
+										Arroz
+								</div>
+							</label>
 						</form>
 
 						<div className="order-separator"></div>
