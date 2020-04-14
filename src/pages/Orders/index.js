@@ -95,8 +95,8 @@ function Dashboard() {
 
                         <ul>
                             <h6 className="foods">Cuzcuz</h6>
-                            {ordersList.cuscuz.map((item) => (
-                                <a href="/detalhes"> <li className="user-order user-order--novo-pedido">
+                            {ordersList.cuscuz.map((item, i) => (
+                                <a href="/detalhes" key={i}><li className="user-order user-order--novo-pedido">
                                     <div className="user-img"><img src={item.img} alt="" /></div>
                                     <div className="order-details">
                                         <span>{item.name}</span>
@@ -108,8 +108,8 @@ function Dashboard() {
                             ))}
                             <div className="order-separator"></div>
                             <h6 className="foods">Pães</h6>
-                            {ordersList.breads.map((item) => (
-                                <a href="/detalhes"><li className="user-order user-order--novo-pedido">
+                            {ordersList.breads.map((item, i) => (
+                                <a href="/detalhes" key={i}><li className="user-order user-order--novo-pedido">
                                     <div className="user-img"><img src={item.img} alt="" /></div>
                                     <div className="order-details">
                                         <span>{item.name}</span>
@@ -121,8 +121,8 @@ function Dashboard() {
                             ))}
                             <div className="order-separator"></div>
                             <h6 className="foods">Salgados</h6>
-                            {ordersList.salgados.map((item) => (
-                                <a href="/detalhes">   <li className="user-order user-order--novo-pedido">
+                            {ordersList.salgados.map((item, i) => (
+                                <a href="/detalhes" key={i}><li className="user-order user-order--novo-pedido">
                                     <div className="user-img"><img src={item.img} alt="" /></div>
                                     <div className="order-details">
                                         <span>{item.name}</span>

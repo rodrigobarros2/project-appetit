@@ -71,4 +71,3 @@ border: ${props => `${props.border}`};
       }
   `;
 
-  

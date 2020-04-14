@@ -3,9 +3,9 @@ import Routes from './routes';
 import './global.css';
 
 function App() {
-  return (
-      <Routes />
-  );
+	return (
+		<Routes />
+	);
 }
 
 export default App;

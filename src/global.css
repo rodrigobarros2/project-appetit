@@ -148,6 +148,7 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: auto;
 }
 
 .contentDashboard {
@@ -386,10 +387,22 @@ body,
   background-color: #ffffff;
 }
 
+.aa {
+  flex: 1;
+  padding: 0 30px 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 70px);
+}
+
 .container-2 {
   position: relative;
   background-color: #fafafa;
   overflow-x: hidden;
+}
+
+.conteudo-container-2 {
+  padding: 0 30px;
 }
 
 .user-order--novo-pedido {
@@ -407,9 +420,6 @@ body,
 .title-container--2 {
   margin: 0;
   margin-top: 100px;
-}
-.conteudo-container-2 {
-  padding: 0 30px;
 }
 
 .p-info {
@@ -490,10 +500,6 @@ body,
   margin-bottom: 10px;
 }
 
-.container-2 {
-  overflow: none;
-}
-
 .btn-scrol-pedido {
   background-color: #ff8822;
   height: 40px;
@@ -553,7 +559,7 @@ body,
   margin-bottom: 10px;
 }
 .div-input-radio {
-  margin: 20px 0;
+  margin: 16px 0 0;
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
@@ -566,16 +572,17 @@ body,
 .form-radio label {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.56);
-  padding: 18px;
+  cursor: pointer;
 }
 .form-radio input {
-  margin-left: 18px;
+  margin: 0 18px;
   width: 18px;
   height: 18px;
 }
 
 .form-radio--responsive {
   width: 100%;
+  margin: 0 0 32px;
 }
 
 .input-obs {
@@ -600,15 +607,16 @@ body,
 
 .contador-pedidos {
   display: flex;
-  position: absolute;
+  position: sticky;
   bottom: 0;
+  left: 0;
   align-items: center;
   justify-content: space-between;
   background: #fafafa;
   width: 100%;
-  padding: 10px;
+  padding: 0 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  margin-top: 4%;
+  line-height: 70px;
 }
 
 .btn-mais {

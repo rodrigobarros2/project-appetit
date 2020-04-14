@@ -14,20 +14,20 @@ import Finished from './pages/Finished'
 
 
 export default function Routes() {
-    return (
-        <Provider store={store}>
-            <BrowserRouter>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/userorders" component={UserOrder} />
-                    <Route exact path="/pedido" component={Orders} />
-                    <Route exact path="/detalhes" component={Details} />
-                    <Route exact path="/comprador" component={Buyer} />
-                    <Route exact path="/statuspagamento" component={PaymentStatus} />
-                    <Route exact path="/finalizado" component={Finished} />
-                </Switch>
-            </BrowserRouter>
-        </Provider>
-    );
+	return (
+		<Provider store={store}>
+			<BrowserRouter>
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/login" component={Login} />
+					<Route exact path="/userorders" component={UserOrder} />
+					<Route exact path="/pedido" component={Orders} />
+					<Route exact path="/detalhes" component={Details} />
+					<Route exact path="/comprador" component={Buyer} />
+					<Route exact path="/statuspagamento" component={PaymentStatus} />
+					<Route exact path="/finalizado" component={Finished} />
+				</Switch>
+			</BrowserRouter>
+		</Provider>
+	);
 }
