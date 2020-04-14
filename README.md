@@ -1,7 +1,7 @@
 # Documentation
 
 ### Bibliotecas utilizadas no projeto
-firebase (simples autenticação da página login. Pode entrar nas rotas normalmente)<br />
+firebase <br/> (simples autenticação da página login, caso queiram testar <br/> login:infoway@teste.com<br/> senha:123456. ops, Pode entrar nas rotas normalmente)<br />
 react <br />
 react-datepicker (calendário clicável dentro de um input)<br />
 redux<br />
@@ -14,21 +14,18 @@ styled-components (fiz somente a ultima página para demonstração de conhecime
 # Documentation
     
 cd project-appetit
- npm install ou yarn install<br />
- npm start ou yarn start<br />
 
-How do I run the demos locally?
+### Como rodar o projeto localmente.
+
 Clone this repo<br />
 git clone https://github.com/rodrigobarros2/project-appetit.git<br />
-Change directory<br />
+Escolha o diretorio<br />
 cd project-appetit<br />
 Install dependencies<br />
 npm install<br />
 or<br />
-
 yarn install<br />
-Run the app<br />
+iniciar aplicação<br />
 npm dev<br />
 or<br />
-
 yarn dev<br />
