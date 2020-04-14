@@ -387,7 +387,7 @@ body,
   background-color: #ffffff;
 }
 
-.aa {
+.container-flex {
   flex: 1;
   padding: 0 30px 30px;
   overflow-y: auto;
@@ -779,6 +779,9 @@ body,
     width: 150px;
     margin-right: 20px;
   }
+  .order-details span {
+    font-size: 2px;
+  }
 }
 
 @media (max-width: 440px) {
@@ -828,9 +831,7 @@ body,
   .grid-container {
     grid-template-columns: 1fr;
   }
-  .voltaicon-oculto {
-    display: block;
-  }
+
   .title-container--2 {
     margin-top: 18px;
   }
@@ -872,9 +873,15 @@ body,
     font-size: 20px;
   }
 }
-
-@media (max-width: 3000px) {
+@media (max-width: 2000px) {
   .voltaicon-oculto {
     display: none;
+  }
+}
+
+@media (max-width: 671px) {
+  .voltaicon-oculto {
+    display: inline-block;
+    margin-top: 18px;
   }
 }
