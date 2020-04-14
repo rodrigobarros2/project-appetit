@@ -57,7 +57,7 @@ function Dashboard() {
     return (
         <main className="">
             <Navbar className="navbar-novo-pedido" />
-            <div class="grid-container">
+            <div className="grid-container">
                 <div className="container-1">
                     <div className="title-container">
                         <a href="/"><VoltarIcon /></a>
@@ -65,7 +65,7 @@ function Dashboard() {
                     </div>
 
                     <div className="icon-resume-container">
-                        <IconResume class="icon-resume" />
+                        <IconResume className="icon-resume" />
                         <p className="legenda-svg-cozinha">Acompanhe aqui um resumo desta venda</p>
                     </div>
                 </div>
@@ -74,6 +74,7 @@ function Dashboard() {
                     <div className="conteudo-container-2">
                         <div className="title-container title-container--2 ">
                             <a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
+
                             <h3 className="content-title">Informações para o pedido</h3>
                         </div>
                         <p className="p-info">Preencha as informações abaixo para concluir esta venda.</p>

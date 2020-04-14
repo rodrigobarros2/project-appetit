@@ -91,6 +91,8 @@ function Dashboard() {
 						<div className="title-container title-container--2 ">
 
 							<a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
+
+
 							<h3 className="content-title">Informações para o pedido</h3>
 						</div>
 						<p className="p-info">Preencha as informações abaixo para concluir esta venda.</p>

@@ -15,7 +15,6 @@ function Login() {
 	const dispatch = useDispatch();
 
 	function logar() {
-		/* then é uma promessa entra uma requesição e quem requisita, se email e senha der errado entara na condição error */
 		firebase.auth().signInWithEmailAndPassword(email, senha).then(resultado => {
 			setMsgTipo('sucesso')
 			setTimeout(() => {
@@ -42,7 +41,7 @@ function Login() {
 					type="email"
 					name="email"
 					placeholder="Email"
-					autocomplete="off"
+					autoComplete="off"
 
 				/>
 				<label htmlFor="password"></label>
@@ -62,7 +61,6 @@ function Login() {
 					Entrar
                 </button>
 				<div>
-					{/*  === é igual e do msm tipo? */}
 					{msgTipo === 'sucesso' && <span>Usuário Logado</span>}
 					{msgTipo === 'erro' && <span>Verifique se a senha e usuário estão corretos</span>}
 				</div>

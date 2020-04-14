@@ -34,7 +34,7 @@ function Home() {
 		{
 			name: 'Ana Virlania',
 			products: [
-				'2x sanduiche de pão de arroz, vitamina de goiaba',
+				'2x sanduiche, vitamina de goiaba',
 			],
 			price: 3.5
 		},
@@ -68,8 +68,8 @@ function Home() {
 					<span><b>13/05/2019,</b> você vendeu <b>R$ 45,80</b></span>
 					<a className="link-style" href="/userorders">
 						<ul>
-							{ordersList.map((item) => (
-								<li className="user-order">
+							{ordersList.map((item, i) => (
+								<li className="user-order" key={i}>
 									<div>
 										<div className="user-img" src={item.img}>{item.photo}</div>
 									</div>
@@ -89,8 +89,8 @@ function Home() {
 					<span><b>09/05/2019,</b> você vendeu <b>R$ 123,50</b></span>
 					<a href="userorders">
 						<ul>
-							{ordersList2.map((item) => (
-								<li className="user-order">
+							{ordersList2.map((item, i) => (
+								<li className="user-order" key={i}>
 									<div>
 										<div className="user-img">{item.photo}</div>
 									</div>
