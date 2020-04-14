@@ -15,17 +15,15 @@ export const Container2 = styled.div`
     justify-content:center;
 
     @media (max-width: 1034px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items:center;
     justify-content:center;
   }
 `;
 
 export const Navbar = styled.div`
-
     @media (max-width: 1050px) {
     display:none;
-
   }
 `;
 
@@ -37,7 +35,6 @@ export const GridContainer = styled.div`
   @media (max-width: 984px) {
     grid-template-columns: 1fr;
   }
-
 `;
 
 export const Titulo = styled.p`
