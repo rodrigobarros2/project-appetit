@@ -4,7 +4,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import img from "../../assets/IMG.png"
-/* import IconCalendar from "../../assets/icons/IconCalendar" */
 
 import VoltarIcon from "../../assets/icons/voltar";
 
@@ -37,7 +36,7 @@ function PaymentStatus() {
 				name: '2x Cuscuz completo',
 				img: img,
 				price: 3.25,
-				obs: 'Não adicionar manteigaa',
+				obs: 'Não adicionar manteiga',
 			},
 		],
 	};
@@ -75,7 +74,6 @@ function PaymentStatus() {
 					<div className="barra-cinza"></div>
 					<div className=" total">
 						<h4>Clientes</h4>
-
 						<ul>
 							{ordersList.cliente.map((item, i) => (
 								<div key={i}>
@@ -115,15 +113,27 @@ function PaymentStatus() {
 
 						<h6 className="esta-vendendo">Qual o status de pagamento?</h6>
 
-						<form className="form-radio radio-response">
-							<div className="div-input-radio">
-								<input type="radio" id="male" name="gender" defaultValue="male" />
-								<label htmlFor="male">Não está pago</label>
-							</div>
-							<div className="div-input-radio">
-								<input type="radio" id="female" name="gender" defaultValue="female" />
-								<label htmlFor="female">Já está pago</label><br />
-							</div>
+						<form className="form-radio form-radio--responsive">
+							<label htmlFor="male">
+								<div className="div-input-radio">
+									<input
+										type="radio"
+										id="male"
+										name="gender"
+										defaultValue="male" />
+										Não está pago
+								</div>
+							</label>
+							<label htmlFor="female">
+								<div className="div-input-radio">
+									<input
+										type="radio"
+										id="female"
+										name="gender"
+										defaultValue="female" />
+										Já está pago
+								</div>
+							</label>
 						</form>
 
 						<p className="text-obs">Em qual data foi realizado?</p>
@@ -136,8 +146,6 @@ function PaymentStatus() {
 							selected={startDate}
 							onChange={date => setStartDate(date)}>
 						</DatePicker>
-
-						{/* <IconCalendar /> */}
 
 						<div className="btn-container">
 							<a href="/finalizado"><button className="btn-scrol-pedido">avançar</button></a>
