@@ -641,9 +641,6 @@ body,
   color: #ffffff;
 }
 
-.container-button {
-}
-
 .progress-bar-orange-2 {
   width: 66%;
 }
@@ -754,6 +751,28 @@ body,
   justify-content: center;
 }
 
+@media (max-width: 320px) {
+  form {
+    margin-top: 30px;
+  }
+  .btn-entrar {
+    width: 280px;
+  }
+  .style-text {
+    font-size: 14px;
+  }
+  .input-obs {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .btn-adicionar {
+    width: 150px;
+    margin-right: 20px;
+  }
+}
+
 @media (max-width: 440px) {
   form {
     width: 90%;
@@ -772,34 +791,6 @@ body,
   }
 }
 
-@media (max-width: 390px) {
-  .btn-adicionar {
-    width: 150px;
-    margin-right: 20px;
-  }
-}
-
-@media (max-width: 320px) {
-  form {
-    margin-top: 30px;
-  }
-  .btn-entrar {
-    width: 280px;
-  }
-  .style-text {
-    font-size: 14px;
-  }
-  .input-obs {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 856px) {
-  .navbar {
-    display: none;
-  }
-}
-
 @media (max-width: 530px) {
   .order-details span {
     font-size: 12px;
@@ -812,7 +803,6 @@ body,
   .order-details .username {
     font-size: 16px;
   }
-
   .user-img {
     width: 40px;
     height: 40px;
@@ -820,34 +810,6 @@ body,
   .user-order {
     display: flex;
     align-items: center;
-  }
-}
-
-@media (max-width: 1081px) {
-  .content-title {
-    font-size: 20px;
-  }
-}
-@media (max-width: 1021px) {
-  .content-title {
-    font-size: 18px;
-  }
-}
-@media (max-width: 985px) {
-  .content-title {
-    font-size: 18px;
-  }
-  .navbar {
-    display: none;
-  }
-  .p-info {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 3000px) {
-  .voltaicon-oculto {
-    display: none;
   }
 }
 
@@ -866,9 +828,45 @@ body,
   }
 }
 
+@media (max-width: 856px) {
+  .navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 985px) {
+  .content-title {
+    font-size: 18px;
+  }
+  .navbar {
+    display: none;
+  }
+  .p-info {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1021px) {
+  .content-title {
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 1038px) {
   .container-button {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 1081px) {
+  .content-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 3000px) {
+  .voltaicon-oculto {
+    display: none;
   }
 }
