@@ -13,11 +13,9 @@ styled-components (fiz somente a ultima página para demonstração de conhecime
 
 # Documentação
     
-cd project-appetit
-
 ### Como rodar o projeto localmente.
 
-Clone this repo<br />
+Clonando o repositório<br />
 
 git clone https://github.com/rodrigobarros2/project-appetit.git<br />
 
@@ -26,10 +24,9 @@ Escolha o diretorio<br />
 cd project-appetit<br />
 
 Install dependencies<br />
+
 npm install<br />
-
-or<br />
-
+ou<br />
 yarn install<br />
 
 iniciar aplicação<br />
