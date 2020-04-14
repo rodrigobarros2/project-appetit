@@ -1,7 +1,7 @@
 # Documentation
 
 ### Bibliotecas utilizadas no projeto
-firebase (simples autenticação da página login, caso queiram testar login:infoway@teste.com senha:123456. ops, Pode entrar nas rotas normalmente)<br />
+firebase (simples autenticação da página login, caso queiram testar. login:infoway@teste.com senha:123456. ops, Pode entrar nas rotas normalmente)<br />
 react <br />
 react-datepicker (calendário clicável dentro de um input)<br />
 redux<br />
@@ -23,13 +23,13 @@ Escolha o diretorio<br />
 
 cd project-appetit<br />
 
-Install dependencies<br />
+Instalando dependencias<br />
 
 npm install<br />
 ou<br />
 yarn install<br />
 
-iniciar aplicação<br />
+Iniciar aplicação<br />
 
 npm dev<br />
 ou<br />
