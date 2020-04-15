@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../../components/navbar";
 
 import VoltarIcon from "../../assets/icons/voltar";
+import Profile from '../../assets/Profile.png'
+import UserIcon from '../../assets/UserIcon.png'
 
 function Dashboard() {
 	const ordersList = [
@@ -10,6 +12,7 @@ function Dashboard() {
 			products: [
 				'2x Bolo frito + Café c/leite',
 			],
+			img: UserIcon,
 			price: 3.5
 		},
 	];
@@ -20,6 +23,9 @@ function Dashboard() {
 		<main className="">
 			<Navbar />
 			<div className="contentDashboard contentDashboard--UserOrder">
+				<div className="profile-img">
+					<img src={Profile} />
+				</div>
 				<a href="/"><VoltarIcon /></a>
 				<h3 className="content-title">Pedidos de Luiz</h3>
 
@@ -28,9 +34,11 @@ function Dashboard() {
 
 					<ul>
 						{ordersList.map((item, i) => (
-							<div key={i}>
-								<li className="user-order order--pedidos">
-									<div className="user-img">{item.photo}</div>
+							<div>
+								<li className="user-order order--pedidos" key={i}>
+									<div className="user-img">
+										<img src={item.img} alt="" />
+									</div>
 									<div className="style-text">
 										<div className="">
 											<span>{item.products.join(', ')}</span>
@@ -48,7 +56,9 @@ function Dashboard() {
 						{ordersList.map((item, i) => (
 							<div key={i}>
 								<li className="user-order order--pedidos">
-									<div className="user-img"></div>
+									<div className="user-img">
+										<img src={item.img} alt="" />
+									</div>
 									<div className="style-text">
 										<div className="">
 											<span>{item.products.join(', ')}</span>
