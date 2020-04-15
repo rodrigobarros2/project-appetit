@@ -93,7 +93,7 @@ function Dashboard() {
 					<div className="conteudo-container-2">
 						<div className="title-container title-container--2 ">
 							<div className="profile-img">
-								<img src={Profile} />
+								<img src={Profile} alt="profile-image2" />
 							</div>
 
 							<a className="voltaicon-oculto" href="/"><VoltarIcon /></a>

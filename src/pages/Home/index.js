@@ -66,7 +66,7 @@ function Home() {
 				<h3 className="content-title">Olá, Vanusa!</h3>
 
 				<div className="profile-img">
-					<img src={Profile} />
+					<img src={Profile} alt="profile-image2" />
 				</div>
 
 				<a className="link-style " href="/pedido">
@@ -88,7 +88,7 @@ function Home() {
 							{ordersList.map((item, i) => (
 								<li className="user-order" key={i}>
 									<div className="user-img">
-										<img src={item.img} />
+										<img src={item.img} alt="profile-image2" />
 									</div>
 
 									<div className="order-details" style={{ marginRight: 'auto' }}>

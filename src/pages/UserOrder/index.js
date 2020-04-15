@@ -24,7 +24,7 @@ function Dashboard() {
 			<Navbar />
 			<div className="contentDashboard contentDashboard--UserOrder">
 				<div className="profile-img">
-					<img src={Profile} />
+					<img src={Profile} alt="profile-image2" />
 				</div>
 				<a href="/"><VoltarIcon /></a>
 				<h3 className="content-title">Pedidos de Luiz</h3>

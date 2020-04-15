@@ -79,7 +79,7 @@ function Dashboard({ history }) {
                 <div className="container-2">
                     <div className="container-flex" data-active={cart.items.length ? true : false}>
                         <div className="profile-img">
-                            <img src={Profile} />
+                            <img src={Profile} alt="profile-image2" />
                         </div>
                         <div className="title-container title-container--2 ">
                             <a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
@@ -157,7 +157,7 @@ function Dashboard({ history }) {
                         <div className="container-btn-oculto">
                             <button
                                 className="btn-oculto"
-                                onClick={()=> {history.replace('/comprador')}}>Avançar <IconAvancar /></button>
+                                onClick={() => { history.replace('/comprador') }}>Avançar <IconAvancar /></button>
                         </div>
 
                     </div>
