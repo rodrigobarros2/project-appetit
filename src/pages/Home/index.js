@@ -45,7 +45,6 @@ function Home() {
       img: UserIcon,
     },
     {
-
       name: 'Marcel Batista',
       products: [
         'Cuscuz com calabresa',
@@ -70,7 +69,7 @@ function Home() {
         </div>
 
         <a className="link-style " href="/pedido">
-          <button className="do-order">
+          <button type="button" className="do-order">
             <AddPlus />
             {' '}
             fazer novo pedido

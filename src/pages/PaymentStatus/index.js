@@ -50,7 +50,10 @@ function PaymentStatus() {
         <div className="container-1">
           <div className="conteudo-comprador">
             <div className="title-container title-container-comprador">
-              <a href="/comprador"><VoltarIcon /></a>
+              <a href="/comprador">
+                {' '}
+                <VoltarIcon />
+              </a>
               <h3 className="content-title">Novo pedido</h3>
             </div>
             <h4 className="produtos-comprador">Produtos</h4>
@@ -100,9 +103,11 @@ function PaymentStatus() {
             <div className="profile-img">
               <img src={Profile} alt="profile-image2" />
             </div>
-            <div className="title-container title-container--2 ">
-
-              <a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
+            <div className="title-container title-container--2">
+              <a className="voltaicon-oculto" href="/">
+                {' '}
+                <VoltarIcon />
+              </a>
               <h3 className="content-title">Informações para o pedido</h3>
             </div>
             <p className="p-info">Preencha as informações abaixo para concluir esta venda.</p>
@@ -152,7 +157,7 @@ function PaymentStatus() {
             />
 
             <div className="btn-container">
-              <a href="/finalizado"><button className="btn-scrol-pedido">avançar</button></a>
+              <a href="/finalizado"><button className="btn-scrol-pedido" type="button">avançar</button></a>
             </div>
           </div>
         </div>

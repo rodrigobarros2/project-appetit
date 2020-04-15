@@ -46,7 +46,10 @@ function Detalhes({ history }) {
       <div className="grid-container">
         <div className="container-1">
           <div className="title-container">
-            <a href="/pedido"><VoltarIcon /></a>
+            <a href="/pedido">
+              <VoltarIcon />
+              {' '}
+            </a>
             <h3 className="content-title">Novo pedido</h3>
           </div>
 
@@ -62,7 +65,10 @@ function Detalhes({ history }) {
               <img src={Profile} alt="profile-image2" />
             </div>
             <div className="title-container title-container--2 ">
-              <a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
+              <a className="voltaicon-oculto" href="/">
+                {' '}
+                <VoltarIcon />
+              </a>
               <h3 className="content-title">Detalhes do pedido</h3>
             </div>
             <p className="p-info">Aproveite para adicionar alguma observação para este pedido, caso queira.</p>
@@ -133,9 +139,9 @@ function Detalhes({ history }) {
           </div>
           <div className="contador-pedidos">
             <div className="container-contador">
-              <button value={count} className="btn-menos" onClick={() => setCount(count - 1)}>-</button>
+              <button value={count} type="button" className="btn-menos" onClick={() => setCount(count - 1)}>-</button>
               <p>{count}</p>
-              <button value={count} className="btn-mais" onClick={() => setCount(count + 1)}>+</button>
+              <button value={count} type="button" className="btn-mais" onClick={() => setCount(count + 1)}>+</button>
             </div>
 
             <div className="container-button">

@@ -66,7 +66,10 @@ function Dashboard({ history }) {
       <div className="grid-container">
         <div className="container-1">
           <div className="title-container">
-            <a href="/"><VoltarIcon /></a>
+            <a href="/">
+              {' '}
+              <VoltarIcon />
+            </a>
             <h3 className="content-title">Novo pedido</h3>
           </div>
 
@@ -82,7 +85,10 @@ function Dashboard({ history }) {
               <img src={Profile} alt="profile-image2" />
             </div>
             <div className="title-container title-container--2 ">
-              <a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
+              <a className="voltaicon-oculto" href="/">
+                {' '}
+                <VoltarIcon />
+              </a>
 
               <h3 className="content-title">Informações para o pedido</h3>
             </div>
@@ -150,7 +156,7 @@ function Dashboard({ history }) {
               ))}
 
               <div className="btn-container" data-active={!!cart.items.length}>
-                <a href="/comprador"><button className="btn-scrol-pedido">avançar</button></a>
+                <a href="/comprador"><button type="button" className="btn-scrol-pedido">avançar</button></a>
               </div>
             </ul>
           </div>
@@ -164,15 +170,14 @@ function Dashboard({ history }) {
             <div className="container-btn-oculto">
               <button
                 className="btn-oculto"
+                type="button"
                 onClick={() => { history.replace('/comprador'); }}
               >
                 Avançar
                 {' '}
                 <IconAvancar />
-
               </button>
             </div>
-
           </div>
         </div>
       </div>

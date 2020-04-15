@@ -60,7 +60,10 @@ function Dashboard() {
         <div className="container-1">
           <div className="conteudo-comprador">
             <div className="title-container title-container-comprador">
-              <a href="/pedido"><VoltarIcon /></a>
+              <a href="/pedido">
+                {' '}
+                <VoltarIcon />
+              </a>
               <h3 className="content-title">Novo pedido</h3>
             </div>
             <h4 className="produtos-comprador">Produtos</h4>
@@ -96,7 +99,10 @@ function Dashboard() {
                 <img src={Profile} alt="profile-image2" />
               </div>
 
-              <a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
+              <a className="voltaicon-oculto" href="/">
+                {' '}
+                <VoltarIcon />
+              </a>
 
               <h3 className="content-title">Informações para o pedido</h3>
             </div>
@@ -132,7 +138,7 @@ function Dashboard() {
                 </a>
               ))}
               <div className="btn-container">
-                <a href="/statuspagamento"><button className="btn-scrol-pedido">avançar</button></a>
+                <a href="/statuspagamento"><button type="button" className="btn-scrol-pedido">avançar</button></a>
               </div>
             </ul>
           </div>

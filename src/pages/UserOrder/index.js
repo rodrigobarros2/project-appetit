@@ -26,7 +26,10 @@ function Dashboard() {
         <div className="profile-img">
           <img src={Profile} alt="profile-image2" />
         </div>
-        <a href="/"><VoltarIcon /></a>
+        <a href="/">
+          {' '}
+          <VoltarIcon />
+        </a>
         <h3 className="content-title">Pedidos de Luiz</h3>
 
         <div className="orders-list">
@@ -74,4 +77,5 @@ function Dashboard() {
     </main>
   );
 }
+
 export default Dashboard;
