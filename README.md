@@ -1,7 +1,7 @@
 # Documentation
 
 ### Bibliotecas utilizadas no projeto
-firebase (simples autenticação da página login, caso queiram testar. login:infoway@teste.com senha:123456. ops, Pode entrar nas rotas normalmente)<br />
+firebase (simples autenticação da página login, caso queiram testar. login:infoway@teste.com senha:123456. ops, pode entrar nas rotas normalmente)<br />
 react <br />
 react-datepicker (calendário clicável dentro de um input)<br />
 redux<br />
