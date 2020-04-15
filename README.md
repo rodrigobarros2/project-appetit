@@ -5,7 +5,7 @@
 react-datepicker (calendário clicável dentro de um input)<br />
 redux (gerenciar estados da aplicação) <br/>
 react-redux <br />
-react-router-dom<br /> (gerenciar rotas da aplicação)<br />
+react-router-dom (gerenciar rotas da aplicação)<br />
 react-scripts<br />
 styled-components (fiz somente a ultima página para demonstração de conhecimento da biblioteca, poderia optar pela utilização de Sass no projeto também)<br />
 firebase (simples autenticação da página login, caso queiram testar. login:infoway@teste.com senha:123456. ops, pode entrar nas rotas normalmente)<br />
