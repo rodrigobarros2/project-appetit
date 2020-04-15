@@ -34,21 +34,19 @@ function Dashboard() {
 
 					<ul>
 						{ordersList.map((item, i) => (
-							<div>
-								<li className="user-order order--pedidos" key={i}>
-									<div className="user-img">
-										<img src={item.img} alt="" />
+							<li className="user-order order--pedidos" key={i}>
+								<div className="user-img">
+									<img src={item.img} alt="" />
+								</div>
+								<div className="style-text">
+									<div className="">
+										<span>{item.products.join(', ')}</span>
 									</div>
-									<div className="style-text">
-										<div className="">
-											<span>{item.products.join(', ')}</span>
-										</div>
-										<div>
-											<b className="">{formatter.format(item.price)}</b>
-										</div>
+									<div>
+										<b className="">{formatter.format(item.price)}</b>
 									</div>
-								</li>
-							</div>
+								</div>
+							</li>
 						))}
 
 						<span><b>09/05/2019</b></span>
