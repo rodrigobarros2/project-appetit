@@ -13,9 +13,9 @@ styled-components (fiz somente a ultima página para demonstração de conhecime
 
 # Documentação
     
-### Como rodar o projeto localmente.
+## Como rodar o projeto localmente.
 
-Clonando o repositório<br />
+```Clonando o repositório<br />
 
 git clone https://github.com/rodrigobarros2/project-appetit.git<br />
 
@@ -31,6 +31,7 @@ yarn install<br />
 
 Iniciar aplicação<br />
 
-npm dev<br />
+npm start<br />
 ou<br />
-yarn dev<br />
+yarn start<br />
+```
