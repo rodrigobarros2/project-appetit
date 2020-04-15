@@ -26,7 +26,7 @@ cd project-appetit
 Instalando dependencias
 
 npm install
-oU
+ou
 yarn install
 
 Iniciar aplicação
