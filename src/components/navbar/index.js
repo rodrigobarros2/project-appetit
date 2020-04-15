@@ -11,7 +11,7 @@ function Navbar() {
 			</div>
 			<ul className="nav-lista">
 				<li className="nav-item">
-					<a className="nav-item-a" data-selected={true} href="/pedido"><MenuCardapio className="icon-svg" />pedidos</a>
+					<a className="nav-item-a" data-selected={true} href="/"><MenuCardapio className="icon-svg" />pedidos</a>
 					<div className="nav-list-sub">
 						<a className="nav-item-a-sub" data-selected={true} href="/pedidos/abertos">Em aberto</a>
 						<a className="nav-item-a-sub" href="/pedidos/encerrados">Encerrados</a>
