@@ -4,7 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import img from "../../assets/IMG.png"
-
+import Profile from '../../assets/Profile.png'
 import VoltarIcon from "../../assets/icons/voltar";
 
 function PaymentStatus() {
@@ -97,6 +97,9 @@ function PaymentStatus() {
 
 				<div className="container-2">
 					<div className="conteudo-container-2">
+						<div className="profile-img">
+							<img src={Profile} />
+						</div>
 						<div className="title-container title-container--2 ">
 
 							<a className="voltaicon-oculto" href="/"><VoltarIcon /></a>

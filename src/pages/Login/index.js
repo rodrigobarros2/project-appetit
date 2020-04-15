@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 import firebase from '../../database/fireConnection'
 import IconAppetit from "../../assets/icons/logoAppetit"
-
-import { useSelector, useDispatch } from 'react-redux';
 
 function Login() {
 

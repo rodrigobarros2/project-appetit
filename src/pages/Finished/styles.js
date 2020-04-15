@@ -44,6 +44,22 @@ line-height: 30px;
 color: rgba(0, 0, 0, 0.88);
 `;
 
+export const Profile = styled.img`
+ src: url(${props => props.src});
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  overflow: hidden;
+  position: absolute;
+  margin: 16px 39px;
+  top: 0;
+  right: 0;
+`;
+
+
+
 export const Button = styled.button`
 width: 328px;
 height: 48px;

@@ -1,13 +1,19 @@
 import React from "react";
 import Navbar from "../../components/navbar";
+import { useSelector } from 'react-redux';
 
 import img from "../../assets/IMG.png"
 
 import SearchIcon from "../../assets/icons/Search"
 import IconResume from "../../assets/icons/IconResume"
 import VoltarIcon from "../../assets/icons/voltar";
+import IconAvancar from "../../assets/icons/IconAvancar"
 
-function Dashboard() {
+import Profile from '../../assets/Profile.png'
+
+function Dashboard({ history }) {
+    const cart = useSelector(state => state.cart);
+
     const ordersList = {
         cuscuz: [
             {
@@ -71,7 +77,10 @@ function Dashboard() {
                 </div>
 
                 <div className="container-2">
-                    <div className="conteudo-container-2">
+                    <div className="container-flex" data-active={cart.items.length ? true : false}>
+                        <div className="profile-img">
+                            <img src={Profile} />
+                        </div>
                         <div className="title-container title-container--2 ">
                             <a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
 
@@ -134,10 +143,23 @@ function Dashboard() {
                                 </li>
                                 </a>
                             ))}
-                            <div className="btn-container">
+
+                            <div className="btn-container" data-active={cart.items.length ? true : false}>
                                 <a href="/comprador"><button className="btn-scrol-pedido">avançar</button></a>
                             </div>
                         </ul>
+                    </div>
+
+                    <div className="bar-order-oculte" data-active={cart.items.length ? true : false}>
+                        <div>
+                            Total: {formatter.format(cart.total)}
+                        </div>
+                        <div className="container-btn-oculto">
+                            <button
+                                className="btn-oculto"
+                                onClick={()=> {history.replace('/comprador')}}>Avançar <IconAvancar /></button>
+                        </div>
+
                     </div>
                 </div>
             </div>

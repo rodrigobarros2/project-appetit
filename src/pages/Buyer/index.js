@@ -1,23 +1,26 @@
 import React from "react";
+import { useSelector } from 'react-redux';
 import Navbar from "../../components/navbar";
 import img from "../../assets/IMG.png"
 
 import SearchIcon from "../../assets/icons/Search"
 import VoltarIcon from "../../assets/icons/voltar";
+import Profile from '../../assets/Profile.png'
 
 function Dashboard() {
+	const cart = useSelector(state => state.cart);
 
 	const ordersList = {
 		cliente: [
 			{
 				name: 'Justine Marshall',
 				img: img,
-				price: 2.25
+				price: 2.25,
 			},
 			{
 				name: 'Bairam Frootan',
 				img: img,
-				price: 3.25
+				price: 3.25,
 			},
 			{
 				name: 'Tua Manuera',
@@ -27,12 +30,12 @@ function Dashboard() {
 			{
 				name: 'Bairam Frootan',
 				img: img,
-				price: 3.25
+				price: 3.25,
 			},
 			{
 				name: 'Justine Marshall',
 				img: img,
-				price: 3.25
+				price: 3.25,
 			},
 		],
 	};
@@ -82,16 +85,18 @@ function Dashboard() {
 					<div className="barra-cinza"></div>
 					<div className="container-total total">
 						<h4>Total</h4>
-						<h4 className="preco-comprador">R$6,50</h4>
+						<h4 className="preco-comprador">{formatter.format(cart.total)}</h4>
 					</div>
 				</div>
 
 				<div className="container-2">
 					<div className="conteudo-container-2">
 						<div className="title-container title-container--2 ">
+							<div className="profile-img">
+								<img src={Profile} />
+							</div>
 
 							<a className="voltaicon-oculto" href="/"><VoltarIcon /></a>
-
 
 							<h3 className="content-title">Informações para o pedido</h3>
 						</div>
@@ -116,7 +121,9 @@ function Dashboard() {
 							{ordersList.cliente.map((item, i) => (
 								<a href="/comprador" key={i}>
 									<li className="user-order user-order--novo-pedido">
-										<div className="user-img"><img src={item.img} alt="" /></div>
+										<div className="user-img">
+											<img src={item.img} alt="" />
+										</div>
 										<div className="order-details">
 											<span>{item.name}</span>
 										</div>

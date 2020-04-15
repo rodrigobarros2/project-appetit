@@ -3,6 +3,8 @@ import Navbar from "../../components/navbar";
 import AddPlus from '../../assets/icons/AddPlus';
 import SearchIcon from '../../assets/icons/Search';
 import FilterIcon from '../../assets/icons/FilterIcon';
+import Profile from '../../assets/Profile.png'
+import UserIcon from '../../assets/UserIcon.png'
 
 function Home() {
 	const ordersList = [
@@ -12,14 +14,16 @@ function Home() {
 				'Cuscuz com calabresa',
 				'Suco de laranja'
 			],
-			price: 3.5
+			price: 3.5,
+			img: UserIcon,
 		},
 		{
 			name: 'Fernanda Siqueira',
 			products: [
 				'Iogurte desnatado com maça'
 			],
-			price: 7.9
+			price: 7.9,
+			img: UserIcon,
 		},
 		{
 			name: 'Luiz Oliveira',
@@ -27,6 +31,7 @@ function Home() {
 				'2x bolo frito,café c/leite'
 			],
 			price: 4.50,
+			img: UserIcon,
 		},
 	];
 
@@ -36,15 +41,18 @@ function Home() {
 			products: [
 				'2x sanduiche, vitamina de goiaba',
 			],
-			price: 3.5
+			price: 3.5,
+			img: UserIcon,
 		},
 		{
+
 			name: 'Marcel Batista',
 			products: [
 				'Cuscuz com calabresa',
 				'Suco de laranja'
 			],
-			price: 3.5
+			price: 3.5,
+			img: UserIcon,
 		},
 	];
 
@@ -54,9 +62,18 @@ function Home() {
 		<main className="tela-inicial">
 			<Navbar />
 			<div className="contentDashboard">
+
 				<h3 className="content-title">Olá, Vanusa!</h3>
 
-				<a className="link-style " href="/pedido"><button className="do-order"><AddPlus />fazer novo pedido</button></a>
+				<div className="profile-img">
+					<img src={Profile} />
+				</div>
+
+				<a className="link-style " href="/pedido">
+					<button className="do-order">
+						<AddPlus /> fazer novo pedido
+					</button>
+				</a>
 
 				<div className="search-area">
 					<SearchIcon />
@@ -65,18 +82,18 @@ function Home() {
 				</div>
 
 				<div className="orders-list">
-					<span><b>13/05/2019,</b> você vendeu <b>R$ 45,80</b></span>
+					<span className="orders-list-span"><b>13/05/2019,</b> você vendeu <b>R$ 45,80</b></span>
 					<a className="link-style" href="/userorders">
 						<ul>
 							{ordersList.map((item, i) => (
 								<li className="user-order" key={i}>
-									<div>
-										<div className="user-img" src={item.img}>{item.photo}</div>
+									<div className="user-img">
+										<img src={item.img} />
 									</div>
 
 									<div className="order-details" style={{ marginRight: 'auto' }}>
-										<b className="username">{item.name}</b>
-										<span>{item.products.join(', ')}</span>
+										<b className="order-details-username">{item.name}</b>
+										<span className="order-details-span">{item.products.join(', ')}</span>
 									</div>
 
 									<div>
@@ -86,18 +103,18 @@ function Home() {
 							))}
 						</ul>
 					</a>
-					<span><b>09/05/2019,</b> você vendeu <b>R$ 123,50</b></span>
+					<span className="orders-list-span"><b>09/05/2019,</b> você vendeu <b>R$ 123,50</b></span>
 					<a href="userorders">
 						<ul>
 							{ordersList2.map((item, i) => (
 								<li className="user-order" key={i}>
-									<div>
-										<div className="user-img">{item.photo}</div>
+									<div className="user-img">
+										<img src={item.img} alt="" />
 									</div>
 
 									<div className="order-details" style={{ marginRight: 'auto' }}>
-										<b className="username">{item.name}</b>
-										<span>{item.products.join(', ')}</span>
+										<b className="order-details-username">{item.name}</b>
+										<span className="order-details-span">{item.products.join(', ')}</span>
 									</div>
 
 									<div>
