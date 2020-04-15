@@ -15,23 +15,23 @@ styled-components (fiz somente a ultima página para demonstração de conhecime
     
 ## Como rodar o projeto localmente.
 
-```Clonando o repositório<br />
+```Clonando o repositório
 
 git clone https://github.com/rodrigobarros2/project-appetit.git<br />
 
-Escolha o diretorio<br />
+Escolha o diretorio
 
-cd project-appetit<br />
+cd project-appetit
 
-Instalando dependencias<br />
+Instalando dependencias
 
-npm install<br />
-ou<br />
-yarn install<br />
+npm install
+oU
+yarn install
 
-Iniciar aplicação<br />
+Iniciar aplicação
 
-npm start<br />
-ou<br />
-yarn start<br />
+npm start
+ou
+yarn start
 ```
