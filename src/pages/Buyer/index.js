@@ -2,10 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Navbar from '../../components/navbar';
 import img from '../../assets/IMG.png';
-
 import SearchIcon from '../../assets/icons/Search';
 import VoltarIcon from '../../assets/icons/voltar';
 import Profile from '../../assets/Profile.png';
+import UserIcon from '../../assets/UserIcon.png';
 
 function Dashboard() {
   const cart = useSelector((state) => state.cart);
@@ -14,27 +14,27 @@ function Dashboard() {
     cliente: [
       {
         name: 'Justine Marshall',
-        img,
+        img: UserIcon,
         price: 2.25,
       },
       {
         name: 'Bairam Frootan',
-        img,
+        img: UserIcon,
         price: 3.25,
       },
       {
         name: 'Tua Manuera',
-        img,
+        img: UserIcon,
         price: 3.25,
       },
       {
         name: 'Bairam Frootan',
-        img,
+        img: UserIcon,
         price: 3.25,
       },
       {
         name: 'Justine Marshall',
-        img,
+        img: UserIcon,
         price: 3.25,
       },
     ],
@@ -68,8 +68,8 @@ function Dashboard() {
             </div>
             <h4 className="produtos-comprador">Produtos</h4>
             <ul>
-              {ordersList1.pedido.map((item, i) => (
-                <div key={i}>
+              {ordersList1.pedido.map((item) => (
+                <div key={item.id}>
                   <li className="user-order user-order--novo-pedido comprador-grupo-de-pedidos">
                     <div className="user-img"><img src={item.img} alt="" /></div>
                     <div className="order-details">
@@ -122,8 +122,8 @@ function Dashboard() {
             </div>
 
             <ul>
-              {ordersList.cliente.map((item, i) => (
-                <a href="/comprador" key={i}>
+              {ordersList.cliente.map((item) => (
+                <a href="/comprador" key={item.id}>
                   <li className="user-order user-order--novo-pedido">
                     <div className="user-img">
                       <img src={item.img} alt="" />

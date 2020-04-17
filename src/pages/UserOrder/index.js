@@ -36,8 +36,8 @@ function Dashboard() {
           <span><b>13/05/2019</b></span>
 
           <ul>
-            {ordersList.map((item, i) => (
-              <li className="user-order order--pedidos" key={i}>
+            {ordersList.map((item) => (
+              <li className="user-order order--pedidos" key={item.id}>
                 <div className="user-img">
                   <img src={item.img} alt="" />
                 </div>
@@ -54,8 +54,8 @@ function Dashboard() {
 
             <span><b>09/05/2019</b></span>
 
-            {ordersList.map((item, i) => (
-              <div key={i}>
+            {ordersList.map((item) => (
+              <div key={item.id}>
                 <li className="user-order order--pedidos">
                   <div className="user-img">
                     <img src={item.img} alt="" />

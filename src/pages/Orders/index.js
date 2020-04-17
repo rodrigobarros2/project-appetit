@@ -3,12 +3,10 @@ import { useSelector } from 'react-redux';
 import Navbar from '../../components/navbar';
 
 import img from '../../assets/IMG.png';
-
 import SearchIcon from '../../assets/icons/Search';
 import IconResume from '../../assets/icons/IconResume';
 import VoltarIcon from '../../assets/icons/voltar';
 import IconAvancar from '../../assets/icons/IconAvancar';
-
 import Profile from '../../assets/Profile.png';
 
 function Dashboard({ history }) {
@@ -109,8 +107,8 @@ function Dashboard({ history }) {
 
             <ul>
               <h6 className="foods">Cuzcuz</h6>
-              {ordersList.cuscuz.map((item, i) => (
-                <a href="/detalhes" key={i}>
+              {ordersList.cuscuz.map((item) => (
+                <a href="/detalhes" key={item.id}>
                   <li className="user-order user-order--novo-pedido">
                     <div className="user-img"><img src={item.img} alt="" /></div>
                     <div className="order-details">
@@ -125,8 +123,8 @@ function Dashboard({ history }) {
               ))}
               <div className="order-separator" />
               <h6 className="foods">Pães</h6>
-              {ordersList.breads.map((item, i) => (
-                <a href="/detalhes" key={i}>
+              {ordersList.breads.map((item) => (
+                <a href="/detalhes" key={item.id}>
                   <li className="user-order user-order--novo-pedido">
                     <div className="user-img"><img src={item.img} alt="" /></div>
                     <div className="order-details">
@@ -141,8 +139,8 @@ function Dashboard({ history }) {
               ))}
               <div className="order-separator" />
               <h6 className="foods">Salgados</h6>
-              {ordersList.salgados.map((item, i) => (
-                <a href="/detalhes" key={i}>
+              {ordersList.salgados.map((item) => (
+                <a href="/detalhes" key={item.id}>
                   <li className="user-order user-order--novo-pedido">
                     <div className="user-img"><img src={item.img} alt="" /></div>
                     <div className="order-details">

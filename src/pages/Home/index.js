@@ -92,8 +92,8 @@ function Home() {
           </span>
           <a className="link-style" href="/userorders">
             <ul>
-              {ordersList.map((item, i) => (
-                <li className="user-order" key={i}>
+              {ordersList.map((item) => (
+                <li className="user-order" key={item.id}>
                   <div className="user-img">
                     <img src={item.img} alt="profile-image2" />
                   </div>
@@ -119,8 +119,8 @@ function Home() {
           </span>
           <a href="userorders">
             <ul>
-              {ordersList2.map((item, i) => (
-                <li className="user-order" key={i}>
+              {ordersList2.map((item) => (
+                <li className="user-order" key={item.id}>
                   <div className="user-img">
                     <img src={item.img} alt="" />
                   </div>

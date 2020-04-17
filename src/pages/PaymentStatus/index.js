@@ -58,8 +58,8 @@ function PaymentStatus() {
             </div>
             <h4 className="produtos-comprador">Produtos</h4>
             <ul>
-              {ordersList1.pedido.map((item, i) => (
-                <div key={i}>
+              {ordersList1.pedido.map((item) => (
+                <div key={item.id}>
                   <li className="user-order user-order--novo-pedido comprador-grupo-de-pedidos">
                     <div className="user-img"><img src={item.img} alt="" /></div>
                     <div className="order-details">
@@ -78,8 +78,8 @@ function PaymentStatus() {
           <div className=" total">
             <h4>Clientes</h4>
             <ul>
-              {ordersList.cliente.map((item, i) => (
-                <div key={i}>
+              {ordersList.cliente.map((item) => (
+                <div key={item.id}>
                   <li className="user-order user-order--novo-pedido clientes-passo3">
                     <div className="user-img"><img src={item.img} alt="" /></div>
                     <div className="order-details">

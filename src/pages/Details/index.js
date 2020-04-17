@@ -5,7 +5,6 @@ import Navbar from '../../components/navbar';
 import IconResume from '../../assets/icons/IconResume';
 import VoltarIcon from '../../assets/icons/voltar';
 import Profile from '../../assets/Profile.png';
-
 import img from '../../assets/IMG.png';
 
 function Detalhes({ history }) {
@@ -74,8 +73,8 @@ function Detalhes({ history }) {
             <p className="p-info">Aproveite para adicionar alguma observação para este pedido, caso queira.</p>
 
             <ul>
-              {ordersList.map((item, i) => (
-                <li className="user-order order--pedidos order--detalhes" key={i}>
+              {ordersList.map((item) => (
+                <li className="user-order order--pedidos order--detalhes" key={item.id}>
                   <div className="user-img">
                     <img src={item.img} alt="" />
                   </div>
