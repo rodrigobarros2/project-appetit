@@ -45,7 +45,7 @@ color: rgba(0, 0, 0, 0.88);
 `;
 
 export const Profile = styled.img`
- src: url(${props => props.src});
+ src: url(${(props) => props.src});
 
   width: 40px;
   height: 40px;
@@ -57,7 +57,6 @@ export const Profile = styled.img`
   top: 0;
   right: 0;
 `;
-
 
 
 export const Button = styled.button`
@@ -72,15 +71,14 @@ text-align: center;
 text-transform: uppercase;
 margin: 0 8px;
 
-color: ${props => `${props.cor}`};
-background-color: ${props => `${props.bg}`};
-border: ${props => `${props.border}`};
+color: ${(props) => `${props.cor}`};
+background-color: ${(props) => `${props.bg}`};
+border: ${(props) => `${props.border}`};
 
 @media (max-width: 1034px) {
     margin:10px;
-  }  
+  }
       @media (max-width: 400px) {
         width: 280px;
       }
   `;
-

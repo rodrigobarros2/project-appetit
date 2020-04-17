@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import Navbar from '../../components/navbar';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -7,8 +8,11 @@ import img from '../../assets/IMG.png';
 import Profile from '../../assets/Profile.png';
 import VoltarIcon from '../../assets/icons/voltar';
 
+
 function PaymentStatus() {
   const [startDate, setStartDate] = React.useState(new Date());
+
+  const cart = useSelector((state) => state.cart);
 
   const ordersList = {
     cliente: [
@@ -58,18 +62,25 @@ function PaymentStatus() {
             </div>
             <h4 className="produtos-comprador">Produtos</h4>
             <ul>
-              {ordersList1.pedido.map((item) => (
-                <div key={item.id}>
+              {cart.items.map((item, i) => (
+                <div key={i.toString()}>
                   <li className="user-order user-order--novo-pedido comprador-grupo-de-pedidos">
-                    <div className="user-img"><img src={item.img} alt="" /></div>
+                    <div className="user-img">
+                      <img src={item.img} alt="" />
+                    </div>
                     <div className="order-details">
-                      <span>{item.name}</span>
+                      <span>
+                        {`${item.quantity}x `}
+                        Cuscuz Completo
+                      </span>
                     </div>
                     <div>
-                      <b className="user-price">{formatter.format(item.price)}</b>
+                      <b className="user-price">
+                        {formatter.format(item.price)}
+                      </b>
                     </div>
                   </li>
-                  <span className="pedido-observacao">{item.obs}</span>
+                  <span className="pedido-observacao">{(cart.obs)}</span>
                 </div>
               ))}
             </ul>

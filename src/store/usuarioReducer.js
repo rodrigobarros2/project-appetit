@@ -15,7 +15,7 @@ const actionType = {
       usuarioEmail: action.usuarioEmail,
     };
   },
-  LOG_OUT(state, action) {
+  LOG_OUT(state) {
     return {
       ...state,
       usuarioLogado: 0,
@@ -24,7 +24,8 @@ const actionType = {
   },
   ADD_CART(state, action) {
     state.cart.items.push({
-      name: action.product.name,
+      img: action.product.img,
+      obs: action.product.obs,
       quantity: action.product.quantity,
       option: action.product.option,
       price: action.product.price,

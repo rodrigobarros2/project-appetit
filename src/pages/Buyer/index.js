@@ -7,7 +7,8 @@ import VoltarIcon from '../../assets/icons/voltar';
 import Profile from '../../assets/Profile.png';
 import UserIcon from '../../assets/UserIcon.png';
 
-function Dashboard() {
+
+function Dashboard({ history }) {
   const cart = useSelector((state) => state.cart);
 
   const ordersList = {
@@ -51,7 +52,10 @@ function Dashboard() {
     ],
   };
 
-  const formatter = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+  const formatter = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  });
 
   return (
     <main className="">
@@ -68,22 +72,28 @@ function Dashboard() {
             </div>
             <h4 className="produtos-comprador">Produtos</h4>
             <ul>
-              {ordersList1.pedido.map((item) => (
-                <div key={item.id}>
+              {cart.items.map((item, i) => (
+                <div key={i.toString()}>
                   <li className="user-order user-order--novo-pedido comprador-grupo-de-pedidos">
-                    <div className="user-img"><img src={item.img} alt="" /></div>
+                    <div className="user-img">
+                      <img src={item.img} alt="" />
+                    </div>
                     <div className="order-details">
-                      <span>{item.name}</span>
+                      <span>
+                        {`${item.quantity}x `}
+                        Cuscuz Completo
+                      </span>
                     </div>
                     <div>
-                      <b className="user-price">{formatter.format(item.price)}</b>
+                      <b className="user-price">
+                        {formatter.format(item.price)}
+                      </b>
                     </div>
                   </li>
-                  <span className="pedido-observacao">{item.obs}</span>
+                  <span className="pedido-observacao">{(cart.obs)}</span>
                 </div>
               ))}
             </ul>
-
           </div>
           <div className="barra-cinza" />
           <div className="container-total total">
@@ -106,7 +116,9 @@ function Dashboard() {
 
               <h3 className="content-title">Informações para o pedido</h3>
             </div>
-            <p className="p-info">Preencha as informações abaixo para concluir esta venda.</p>
+            <p className="p-info">
+              Preencha as informações abaixo para concluir esta venda.
+            </p>
 
             <p className="passo-bar-progress">Passo 2 de 3</p>
 
@@ -114,11 +126,15 @@ function Dashboard() {
               <div className="progress-bar-orange progress-bar-orange-2" />
             </div>
 
-            <h6 className="esta-vendendo">O que você está vendendo?</h6>
+            <h6 className="esta-vendendo">Para quem você está vendendo?</h6>
 
             <div className="search-area">
               <SearchIcon />
-              <input className="order-search" type="text" placeholder="Procure o cliente aqui..." />
+              <input
+                className="order-search"
+                type="text"
+                placeholder="Procure o cliente aqui..."
+              />
             </div>
 
             <ul>
@@ -132,13 +148,18 @@ function Dashboard() {
                       <span>{item.name}</span>
                     </div>
                     <div>
-                      <b className="user-price">{formatter.format(item.price)}</b>
+                      <b className="user-price">
+                        {formatter.format(item.price)}
+                      </b>
                     </div>
                   </li>
                 </a>
               ))}
               <div className="btn-container">
-                <a href="/statuspagamento"><button type="button" className="btn-scrol-pedido">avançar</button></a>
+
+                <button type="button" className="btn-scrol-pedido" onClick={() => { history.push('/statuspagamento'); }}>
+                  avançar
+                </button>
               </div>
             </ul>
           </div>
@@ -147,4 +168,5 @@ function Dashboard() {
     </main>
   );
 }
+
 export default Dashboard;
