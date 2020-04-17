@@ -173,9 +173,11 @@ function Dashboard({ history }) {
                 type="button"
                 onClick={() => { history.replace('/comprador'); }}
               >
-                Avançar
+                <span> Avançar</span>
                 {' '}
-                <IconAvancar />
+                <div>
+                  <IconAvancar />
+                </div>
               </button>
             </div>
           </div>
