@@ -11,6 +11,7 @@
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -22,6 +23,16 @@
         "react"
     ],
     "rules": {
+        "no-tabs": 0,
+        "indent": [2, "tab", { "SwitchCase": 1, "VariableDeclarator": 1 }],
+        "react/jsx-indent": [2, "tab"],
+    	/*"react/prop-types": 0,*/
+        "react/jsx-indent-props": [2, "tab"],
+
+        "operator-linebreak": 0,
+        "react/destructuring-assignment": 0,
+        "no-underscore-dangle": [2, { "allow": ["_id"] }],
+
         "react/jsx-filename-extension": [
             "error",
             {

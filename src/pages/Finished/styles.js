@@ -1,29 +1,29 @@
 import styled from 'styled-components';
 
 export const Container1 = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    width: 100%;
-    padding: 100px 0 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	width: 100%;
+	padding: 100px 0 40px;
 `;
 
 export const Container2 = styled.div`
-    display: flex;
-    align-items:center;
-    justify-content:center;
+	display: flex;
+	align-items:center;
+	justify-content:center;
 
-    @media (max-width: 1034px) {
-    flex-direction: column-reverse;
-    align-items:center;
-    justify-content:center;
-  }
+	@media (max-width: 1034px) {
+	flex-direction: column-reverse;
+	align-items:center;
+	justify-content:center;
+	}
 `;
 
 export const Navbar = styled.div`
-    @media (max-width: 1050px) {
-    display:none;
+	@media (max-width: 1050px) {
+	display:none;
   }
 `;
 
@@ -33,7 +33,7 @@ export const GridContainer = styled.div`
   height: 100%;
 
   @media (max-width: 984px) {
-    grid-template-columns: 1fr;
+	grid-template-columns: 1fr;
   }
 `;
 
@@ -45,10 +45,10 @@ color: rgba(0, 0, 0, 0.88);
 `;
 
 export const Profile = styled.img`
- src: url(${(props) => props.src});
+src: url(${(props) => props.src});
 
-  width: 40px;
-  height: 40px;
+width: 40px;
+height: 40px;
   border-radius: 50%;
   background: #ccc;
   overflow: hidden;
@@ -70,15 +70,16 @@ line-height: 22px;
 text-align: center;
 text-transform: uppercase;
 margin: 0 8px;
+cursor: pointer;
 
 color: ${(props) => `${props.cor}`};
 background-color: ${(props) => `${props.bg}`};
 border: ${(props) => `${props.border}`};
 
 @media (max-width: 1034px) {
-    margin:10px;
+	margin:10px;
   }
-      @media (max-width: 400px) {
-        width: 280px;
-      }
+	  @media (max-width: 400px) {
+		width: 280px;
+	  }
   `;
