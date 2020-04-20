@@ -12,7 +12,6 @@ import Buyer from './pages/Buyer';
 import PaymentStatus from './pages/PaymentStatus';
 import Finished from './pages/Finished';
 
-
 export default function Routes() {
 	return (
 		<Provider store={Store}>
