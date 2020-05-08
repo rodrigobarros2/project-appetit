@@ -1,3 +1,6 @@
+## Application link on heroku
+
+https://project-appetit.herokuapp.com/
 
 ## Some images of the project
 
