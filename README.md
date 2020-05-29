@@ -44,7 +44,7 @@ $ yarn start
 ```
 
 ## About the project
-	O projeto inteiro foi tranquilo de fazem, mas encontrei algumas dificuldades como criar uma estilização personalizada para o datapicker, pequei na escalabilidade do projeto e organização de estilização, hoje revendo o código, deveria ter optador pela utilização do styled components para todos os elementos da página. O redux está muito complicado de entender, antes do projeto desconhecia uma biblioteca chamada immer, na qual deveria ter utilizado no projeto aqui apresentado.
+	O projeto inteiro foi tranquilo de fazer, mas encontrei algumas dificuldades como criar uma estilização personalizada para o datapicker, pequei na escalabilidade do projeto e organização de estilização, hoje revendo o código, deveria ter optador pela utilização do styled components para todos os elementos da página. O redux está muito complicado de entender, antes do projeto desconhecia uma biblioteca chamada immer, na qual deveria ter utilizado no projeto aqui apresentado.
 
 O mais importante nesse projeto foi o aprendizado que carregarei para o resto da vida. Thanks.
 
